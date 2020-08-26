@@ -25,7 +25,9 @@ public class EnemyShoots : MonoBehaviour
         //when it hits the player
 		if (hit.gameObject.tag == "Player") 
 		{
-			hit.gameObject.SetActive (false);
+            Player.health -= 0.1f;
+            Destroy(this.gameObject);
+			//hit.gameObject.SetActive (false);
 		}
 		//when it hits the bottom of the screen
 		if (hit.gameObject.name == "Bottom") 

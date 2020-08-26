@@ -61,5 +61,11 @@ public class Enemy : MonoBehaviour
 				changeDirection = true;
 			}
 		}
+		if (col.gameObject.tag == "Player") 
+		{
+			Player.health -= 0.1f;
+			//if hits player reduce their heatlh and destroy enemy
+				Destroy(this.gameObject);
+		}
 	}
 }
