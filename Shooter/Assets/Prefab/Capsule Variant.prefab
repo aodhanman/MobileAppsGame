@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7212210531583537132, guid: 942f27410d908bf47abac540e06df541, type: 3}
+      propertyPath: m_TagString
+      value: bullet
+      objectReference: {fileID: 0}
     - target: {fileID: 8573589628493977901, guid: 942f27410d908bf47abac540e06df541, type: 3}
       propertyPath: m_CastShadows
       value: 0

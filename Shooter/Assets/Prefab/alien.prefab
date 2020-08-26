@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1187436955
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 165722a9aa1303d45a6dcc9b24dfe6d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44d3fea7ad23ee43ae10295cf02d3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 2009733809, guid: 95e90b53eb69474438ad62ed906122b3, type: 3}
   moveSpeed: 15
   changeDirection: 0
 --- !u!1 &262845838
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d4b562f9194d94796f9b4fdc4553f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 7696538589042669847, guid: 95e90b53eb69474438ad62ed906122b3, type: 3}
   bulletSpawn: {fileID: 0}
   nextFire: 1
   currentTime: 0

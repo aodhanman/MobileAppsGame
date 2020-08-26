@@ -28,6 +28,10 @@ public class obstacles : MonoBehaviour
 		{
 			
 				Destroy(this.gameObject);
+		}if (col.gameObject.tag == "bullet") 
+		{
+                ScoreScript.scoreValue += 10;
+				Destroy(this.gameObject);
 		}
     }
 }
