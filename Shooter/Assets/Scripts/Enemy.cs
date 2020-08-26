@@ -35,6 +35,8 @@ public class Enemy : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
+		//change direction on hitting wall
+
 		if (col.gameObject.name == "rightWall") 
 		{
 			Debug.Log ("Hit the right wall");
@@ -44,6 +46,20 @@ public class Enemy : MonoBehaviour
 		{
 			Debug.Log ("Hit the left wall");
 			changeDirection = false;
+		}
+		if (col.gameObject.tag == "enemy") 
+		{
+
+			//if collides with other enemy change direction
+			Debug.Log ("Hit enemy");
+			if (changeDirection == true) {
+
+				changeDirection = false;
+			} 
+			else if (changeDirection == false) 
+			{
+				changeDirection = true;
+			}
 		}
 	}
 }

@@ -23,8 +23,10 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter2D(Collision2D hit) {
         
         if (hit.gameObject.tag == "enemy"){
-
+            ScoreScript.scoreValue += 100;
             hit.gameObject.SetActive  (false);
+            Destroy(this.gameObject);
+           
         }
         if (hit.gameObject.name == "Top") 
 		{
