@@ -11,9 +11,9 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHitSound = Resources.Load<AudioClip> ("playerHit");
-        shootSound = Resources.Load<AudioClip> ("shot");
-        enemyHitSound = Resources.Load<AudioClip> ("enemyHit");
+        playerHitSound = Resources.Load<AudioClip> ("fireball-01");
+        shootSound = Resources.Load<AudioClip> ("Laser");
+        enemyHitSound = Resources.Load<AudioClip> ("explosion2");
 
         audioSource = GetComponent<AudioSource> ();
     }

@@ -10,9 +10,18 @@ public class Enemy : MonoBehaviour
 
 	public bool changeDirection = false; //set the bool to false
 
+	private SpriteRenderer rend;
+	private Sprite alienSprite, explosionSprite;
+
 	// Use this for initialization
 	void Start () {
 		enemy = this.gameObject.GetComponent<Rigidbody2D>(); 
+
+		rend = GetComponent<SpriteRenderer>();
+		alienSprite = Resources.Load<Sprite>("alien");
+		explosionSprite = Resources.Load<Sprite>("fireball");
+		rend.sprite = alienSprite;
+
 	}
 	
 	// Update is called once per frame
@@ -32,6 +41,7 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
@@ -65,11 +75,18 @@ public class Enemy : MonoBehaviour
 		{
 			Player.health -= 0.1f;
 			//if hits player reduce their heatlh and destroy enemy
+				rend.sprite = explosionSprite;
+				// yield return new WaitForSeconds(.5);
+
+
 				Destroy(this.gameObject);
+
 		}
 		if (col.gameObject.tag == "bullet") 
 		{
 			//if hits enemy destroy
+				rend.sprite = explosionSprite;
+				
 				Destroy(this.gameObject);
 		}
 	}

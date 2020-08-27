@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour
         if (hit.gameObject.tag == "enemy"){
             ScoreScript.scoreValue += 100;
             Spawn.killed ++;
+            SoundManager.PlaySound("enemyHit");
+
            // hit.gameObject.SetActive  (false);
             Destroy(this.gameObject);
            

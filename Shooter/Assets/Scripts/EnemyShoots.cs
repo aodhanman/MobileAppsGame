@@ -26,6 +26,8 @@ public class EnemyShoots : MonoBehaviour
 		if (hit.gameObject.tag == "Player") 
 		{
             Player.health -= 0.1f;
+            			SoundManager.PlaySound("playerHit");
+
             Destroy(this.gameObject);
 			//hit.gameObject.SetActive (false);
 		}
