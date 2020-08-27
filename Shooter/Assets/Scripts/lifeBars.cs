@@ -14,7 +14,9 @@ public class lifeBars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        localScale.x = Player.health;
-        transform.localScale = localScale;
+        if( Player.health > 0){
+            localScale.x = Player.health;
+            transform.localScale = localScale;
+            }
     }
 }

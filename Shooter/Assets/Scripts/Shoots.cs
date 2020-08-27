@@ -29,6 +29,7 @@ public class Shoots : MonoBehaviour
 		{
 			nextFire += currentTime; 
 
+			SoundManager.PlaySound("shot");
 			Instantiate (projectile,projectileSpawn.position, Quaternion.identity);
 
 			nextFire -= currentTime; 

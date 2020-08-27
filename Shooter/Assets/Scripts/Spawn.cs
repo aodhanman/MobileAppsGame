@@ -11,6 +11,8 @@ public class Spawn : MonoBehaviour
     float randY;
     float randX2;
     float randY2;
+
+    public static int killed = 0;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
@@ -42,7 +44,7 @@ public class Spawn : MonoBehaviour
             //spawns obstacles
             nextObstacle = Time.time + obstacleSpawn;
             randX2 = Random.Range(-16.2f, 16.2f);
-            randY2 = Random.Range(11.6f, 10.8f);
+            randY2 = Random.Range(14.6f, 11.8f);
             whereToSpawn = new Vector2(randX2, randY2);
         Instantiate ( obstacle, whereToSpawn, Quaternion.identity);
         }

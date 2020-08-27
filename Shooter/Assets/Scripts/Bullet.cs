@@ -24,7 +24,8 @@ public class Bullet : MonoBehaviour
         
         if (hit.gameObject.tag == "enemy"){
             ScoreScript.scoreValue += 100;
-            hit.gameObject.SetActive  (false);
+            Spawn.killed ++;
+           // hit.gameObject.SetActive  (false);
             Destroy(this.gameObject);
            
         }

@@ -67,5 +67,10 @@ public class Enemy : MonoBehaviour
 			//if hits player reduce their heatlh and destroy enemy
 				Destroy(this.gameObject);
 		}
+		if (col.gameObject.tag == "bullet") 
+		{
+			//if hits enemy destroy
+				Destroy(this.gameObject);
+		}
 	}
 }
