@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShoots : MonoBehaviour
+public class BossShoots : MonoBehaviour
 {
-
-
+   
     public Rigidbody2D projectile; 
 
     public float moveSpeed = 10.0f;
@@ -25,7 +24,7 @@ public class EnemyShoots : MonoBehaviour
         //when it hits the player
 		if (hit.gameObject.tag == "Player") 
 		{
-            Player.health -= 0.1f;
+            Player.health -= 0.2f;
             			SoundManager.PlaySound("playerHit");
 
             Destroy(this.gameObject);

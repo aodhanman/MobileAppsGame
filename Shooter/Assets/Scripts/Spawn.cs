@@ -7,12 +7,15 @@ public class Spawn : MonoBehaviour
 
     public GameObject enemy;
     public GameObject obstacle;
+    public GameObject boss;
+
     float randX;
     float randY;
     float randX2;
     float randY2;
 
     public static int killed = 0;
+    public int bosses = 0;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
@@ -48,6 +51,20 @@ public class Spawn : MonoBehaviour
             whereToSpawn = new Vector2(randX2, randY2);
         Instantiate ( obstacle, whereToSpawn, Quaternion.identity);
         }
+        // boss spawn script
+        if(killed == 2 && bosses == 0){
+
+            //spawns boss at random loaction in range if killed enough enemies
+            randX = Random.Range(-12.2f, 12.2f);
+            randY = Random.Range(10f, 5f);
+            whereToSpawn = new Vector2(randX, randY);
+            Instantiate ( boss, whereToSpawn, Quaternion.identity);
+            bosses++;
+            
+            
+        }
+
+
         
 
     }
