@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
 
             SoundManager.PlaySound("enemyHit");
             
-                        Destroy(this.gameObject);
+                    Destroy(this.gameObject);
 
            // hit.gameObject.SetActive  (false);
            
