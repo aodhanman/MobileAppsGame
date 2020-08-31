@@ -85,15 +85,21 @@ public class bossScript : MonoBehaviour
 		}
 		if (col.gameObject.tag == "bullet") 
 		{
-			//if hits 
-				lives--;
-                if(lives < 1){
-				ScoreScript.scoreValue += 500;
-				Destroy(this.gameObject);
-                LoadNextScene();
+			//if hits decrements lives
+				lives--; 
+					if(lives < 1)
+						// if boss is out of lives give player points, and load next level
+						ScoreScript.scoreValue += 500;
+						Destroy(this.gameObject);
+						level.levelValue += 1;
+						Spawn.killed = 0;
+						Spawn.bosses = 0;
+						lives =5;
+						LoadNextScene();
+
                 }
 		}
-	}
+	
 	public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
