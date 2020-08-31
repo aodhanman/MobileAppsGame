@@ -15,7 +15,7 @@ public class Spawn : MonoBehaviour
     float randY2;
 
     public static int killed = 0;
-    public int bosses = 0;
+    public static int bosses = 0;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;

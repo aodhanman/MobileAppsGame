@@ -26,9 +26,11 @@ public class EnemyShoots : MonoBehaviour
 		if (hit.gameObject.tag == "Player") 
 		{
             Player.health -= 0.1f;
-            			SoundManager.PlaySound("playerHit");
+            SoundManager.PlaySound("playerHit");
 
             Destroy(this.gameObject);
+
+            
 			//hit.gameObject.SetActive (false);
 		}
 		//when it hits the bottom of the screen
@@ -37,6 +39,7 @@ public class EnemyShoots : MonoBehaviour
 			Destroy(this.gameObject);
 		}if (hit.gameObject.tag == "enemy") 
 		{
+            // code to destroy bullet if it hits enemy, currently broken, hits enemy shooting and destroys itself
 			//Destroy(this.gameObject);
 		}
 	}

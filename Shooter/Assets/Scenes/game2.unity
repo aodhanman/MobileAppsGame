@@ -2347,6 +2347,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4483494292064835931, guid: 5de2cab36ef8a1d4180c5ddeef6588a9, type: 3}
+      propertyPath: spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483494292064835931, guid: 5de2cab36ef8a1d4180c5ddeef6588a9, type: 3}
+      propertyPath: obstacleSpawn
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de2cab36ef8a1d4180c5ddeef6588a9, type: 3}
 --- !u!1001 &5172341134223327158

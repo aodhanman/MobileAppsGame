@@ -31,9 +31,11 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
            
         }
-        if (hit.gameObject.tag == "Boss"){
+        if (hit.gameObject.tag == "boss" ){
 
             SoundManager.PlaySound("enemyHit");
+            
+                        Destroy(this.gameObject);
 
            // hit.gameObject.SetActive  (false);
            
