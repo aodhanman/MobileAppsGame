@@ -12,20 +12,16 @@ public class bossScript : MonoBehaviour
 
 	public bool changeDirection = false; //set the bool to false
 
-	public static int lives = 5;
+	//public int lives = 5;
 
-	private SpriteRenderer rend;
-	private Sprite alienSprite, explosionSprite;
+	public static int hits;
+
 
 	// Use this for initialization
 	void Start () {
 		enemy = this.gameObject.GetComponent<Rigidbody2D>(); 
-
-		rend = GetComponent<SpriteRenderer>();
-		alienSprite = Resources.Load<Sprite>("alien");
-		explosionSprite = Resources.Load<Sprite>("fireball");
-		rend.sprite = alienSprite;
-
+		hits = 0;
+		
 	}
 	
 	// Update is called once per frame
@@ -86,15 +82,18 @@ public class bossScript : MonoBehaviour
 		if (col.gameObject.tag == "bullet") 
 		{
 			//if hits decrements lives
-				lives--; 
-					if(lives < 1)
+				hits++;
+
+
+					if(hits > 4 )
 						// if boss is out of lives give player points, and load next level
 						ScoreScript.scoreValue += 500;
-						Destroy(this.gameObject);
-						level.levelValue += 1;
+						level.levelValue ++;
 						Spawn.killed = 0;
-						Spawn.bosses = 0;
-						lives =5;
+						Spawn.bosses --;
+						//lives =5;
+						Destroy(this.gameObject);
+
 						LoadNextScene();
 
                 }

@@ -52,7 +52,7 @@ public class Spawn : MonoBehaviour
         Instantiate ( obstacle, whereToSpawn, Quaternion.identity);
         }
         // boss spawn script
-        if(killed == 2 && bosses == 0){
+        if(killed == 10 && bosses == 0){
 
             //spawns boss at random loaction in range if killed enough enemies
             randX = Random.Range(-12.2f, 12.2f);
