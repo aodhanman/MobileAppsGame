@@ -15,9 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/death.unity
     guid: 2cbbca54aaf153741bfdff8f84d00636
   - enabled: 1
+    path: Assets/Scenes/How to play.unity
+    guid: f7e38318d0fa8c14b9fa9f1eeab2b2d7
+  - enabled: 1
     path: Assets/Scenes/game.unity
     guid: cfa4c066c64c0144bba31007a5f361a9
   - enabled: 1
     path: Assets/Scenes/game2.unity
     guid: 9ea7959c303962f49804a5b21ac1906c
+  - enabled: 1
+    path: Assets/Scenes/game3.unity
+    guid: ffa8dd1822290de4f9cd22d51a125b83
   m_configObjects: {}

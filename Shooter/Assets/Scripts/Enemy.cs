@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour
 		{
 			Player.health -= 0.1f;
 			//if hits player reduce their heatlh and destroy enemy
-				rend.sprite = explosionSprite;
+				//rend.sprite = explosionSprite;
 				// yield return new WaitForSeconds(.5);
 
 
@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
 		if (col.gameObject.tag == "bullet") 
 		{
 			//if hits enemy destroy
-				rend.sprite = explosionSprite;
+				//rend.sprite = explosionSprite;
 				
 				Destroy(this.gameObject);
 		}
