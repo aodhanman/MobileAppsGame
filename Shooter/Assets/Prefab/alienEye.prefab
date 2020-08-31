@@ -66,6 +66,10 @@ PrefabInstance:
     - target: {fileID: 283765598, guid: dca58c69c7ace3045822ab8d9b994947, type: 3}
       propertyPath: enemy
       value: 
+      objectReference: {fileID: 2895644814443065234}
+    - target: {fileID: 283765598, guid: dca58c69c7ace3045822ab8d9b994947, type: 3}
+      propertyPath: moveSpeed
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 862381604258326477, guid: dca58c69c7ace3045822ab8d9b994947, type: 3}
       propertyPath: m_Sprite
@@ -73,3 +77,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f6e55d979a70f2b4092e737a1deeba29, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca58c69c7ace3045822ab8d9b994947, type: 3}
+--- !u!50 &2895644814443065234 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 283765596, guid: dca58c69c7ace3045822ab8d9b994947, type: 3}
+  m_PrefabInstance: {fileID: 2895644814173095118}
+  m_PrefabAsset: {fileID: 0}
